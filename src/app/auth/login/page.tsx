@@ -1,5 +1,6 @@
 'use client';
 
+import TechTree from '@/components/icons/TechTree';
 import InputField from '@/components/shared/inputField';
 import { Button } from '@/components/ui/button';
 import { loginSchema } from '@/core/schema/auth';
@@ -27,10 +28,14 @@ const Login = () => {
   };
 
   return (
-    <>
+    <section className="shadow-sm h-full flex justify-center items-center relative">
+      <div className="lg:hidden w-full px-4 flex justify-between items-start absolute top-[4%]">
+        <TechTree className="size-12 rounded-full p-1 bg-white" />
+        <X onClick={back} strokeWidth={1} />
+      </div>
       <span
         onClick={back}
-        className="p-1 cursor-pointer absolute top-10 lg:top-3 right-3 rounded-full hover:bg-zinc-200 duration-200"
+        className="max-lg:hidden p-1 cursor-pointer absolute top-3 right-3 rounded-full hover:bg-zinc-200 duration-200"
       >
         <X strokeWidth={1} />
       </span>
@@ -62,7 +67,7 @@ const Login = () => {
           placeHolder="Mật khẩu"
           register={register}
           error={errors.email}
-          errorMessage={errors.hashPassword?.message}
+          errorMessage={errors.email?.message}
           prefix={
             <KeyRound
               strokeWidth={1}
@@ -76,7 +81,7 @@ const Login = () => {
           Quên mật khẩu ?
         </Link>
       </form>
-    </>
+    </section>
   );
 };
 

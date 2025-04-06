@@ -57,7 +57,7 @@ const AuthLayout = ({ children }: Props) => {
           </div>
         </div>
       </section>
-      <section className="shadow-sm h-full flex justify-center items-center">{children}</section>
+      {children}
     </main>
   );
 };

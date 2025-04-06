@@ -55,18 +55,18 @@ const SearchAndFilterMobile = () => {
       <div
         className={`${control == 'search' ? 'pr-2 gap-1 w-52' : 'w-10'} duration-200 ease-linear h-10 flex items-center overflow-hidden rounded-full border-none bg-white`}
       >
-        <span onClick={() => openControl('search')} className="size-10 grid place-items-center">
-          <Search strokeWidth={2} size={18} className="text-zinc-600" />
-        </span>
         <div
           className={`duration-200 ease-linear ${control !== 'search' ? '-translate-x-full w-0' : 'w-full translate-x-0'}`}
         >
           <input
             type="search"
-            className="outline-none h-full w-full text-[15px]"
+            className="outline-none pl-3 h-full w-full text-[15px]"
             placeholder="Tìm kiếm ..."
           />
         </div>
+        <span onClick={() => openControl('search')} className="size-10 grid place-items-center">
+          <Search strokeWidth={2} size={18} className="text-zinc-600" />
+        </span>
       </div>
     </section>
   );

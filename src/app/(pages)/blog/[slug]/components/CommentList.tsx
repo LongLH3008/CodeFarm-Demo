@@ -14,7 +14,7 @@ const CommentList = () => {
         <figure className="max-md:hidden min-w-10 h-10 rounded-full bg-zinc-100"></figure>
         <input
           type="text"
-          className="md:hidden outline-none border border-zinc-400 px-3 py-1 text-sm w-full rounded-full"
+          className="md:hidden outline-none border border-zinc-300 px-3 py-2 text-sm w-full rounded-full"
           placeholder="Nhập ..."
         />
         <textarea
