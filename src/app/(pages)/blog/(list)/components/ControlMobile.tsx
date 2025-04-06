@@ -21,7 +21,7 @@ const ControlMobile = () => {
   };
 
   return (
-    <nav className="md:hidden fixed left-1/2 -translate-x-1/2 bottom-[4%] rounded-full z-30 bg-[rgba(0,0,0,0.5)] p-[6px] px-2 shadow-lg w-fit flex gap-[6px] items-center">
+    <nav className="md:hidden fixed left-1/2 -translate-x-1/2 bottom-[2%] rounded-full z-30 bg-[rgba(0,0,0,0.5)] p-[6px] px-2 shadow-lg w-fit flex gap-[6px] items-center">
       <div
         className={`${control == 'tags' ? 'pr-2 gap-1 w-52' : 'w-10'} duration-200 ease-linear h-10 flex items-center overflow-hidden rounded-full border-none bg-white`}
       >
