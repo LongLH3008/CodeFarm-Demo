@@ -1,0 +1,3 @@
+.active_control {
+  @apply text-2xl;
+}
