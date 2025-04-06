@@ -138,9 +138,11 @@
   @apply py-5 md:py-10 max-md:overflow-x-hidden;
 }
 
-.hiding_scroll::-webkit-scrollbar {
-  -webkit-appearance: none;
-  display: none;
+@media screen and (max-width: 768px) {
+  .hiding_scroll_on_mobile::-webkit-scrollbar {
+    -webkit-appearance: none;
+    display: none;
+  }
 }
 
 .button_primary_action {

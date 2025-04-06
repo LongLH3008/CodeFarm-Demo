@@ -5,7 +5,7 @@ const CommentList = () => {
   return (
     <section className="w-full flex flex-col md:gap-3">
       <h3 className="text-lg md:text-xl font-[500] mb-2">Bình luận</h3>
-      <div className="flex flex-col gap-4 h-screen md:max-h-96 max-md:snap-none overflow-y-scroll pr-1 md:pr-4">
+      <div className="flex flex-col gap-4 h-screen md:max-h-96 hiding_scroll_on_mobile overflow-y-scroll pr-1 md:pr-4">
         {Array.from({ length: 10 }).map((_, index: number) => (
           <Comment key={index} />
         ))}
