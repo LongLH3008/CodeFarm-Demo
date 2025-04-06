@@ -30,7 +30,7 @@ const Login = () => {
     <>
       <span
         onClick={back}
-        className="p-1 cursor-pointer absolute top-3 right-3 rounded-full hover:bg-zinc-200 duration-200"
+        className="p-1 cursor-pointer absolute top-10 lg:top-3 right-3 rounded-full hover:bg-zinc-200 duration-200"
       >
         <X strokeWidth={1} />
       </span>
@@ -62,7 +62,7 @@ const Login = () => {
           placeHolder="Mật khẩu"
           register={register}
           error={errors.email}
-          errorMessage={errors.email?.message}
+          errorMessage={errors.hashPassword?.message}
           prefix={
             <KeyRound
               strokeWidth={1}

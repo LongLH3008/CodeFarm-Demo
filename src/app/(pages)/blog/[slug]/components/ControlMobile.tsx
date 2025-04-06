@@ -4,7 +4,7 @@ import CommentListMobile from './CommentListMobile';
 
 const ControlMobile = () => {
   return (
-    <section className="md:hidden fixed left-1/2 -translate-x-1/2 bottom-[4%] z-30 flex gap-3 items-center">
+    <section className="md:hidden fixed left-1/2 -translate-x-1/2 bottom-[2%] z-30 flex gap-3 items-center">
       <div className="rounded-full border border-zinc-100 bg-white p-[6px] px-2 shadow-lg w-fit flex gap-2 items-center">
         <span className="size-9 grid place-items-center rounded-full bg-[#1877f2]">
           <Facebook fill="#fff" size={24} className="text-white stroke-none" />
