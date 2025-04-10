@@ -1,0 +1,49 @@
+.button_primary {
+  @apply cursor-pointer *:z-[1] bg-transparent overflow-hidden relative shadow-none border border-transparent active:scale-[0.95] duration-200;
+}
+
+.button_primary::after {
+  content: '';
+  position: absolute;
+  width: 105%;
+  aspect-ratio: 1/1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  background: linear-gradient(
+    to bottom right,
+    oklch(0.623 0.214 259.815),
+    oklch(0.723 0.219 149.579)
+  );
+  animation: rotate 4s infinite ease-in-out;
+}
+
+.button_primary:hover {
+  animation: primary_button 5s infinite ease-in-out;
+  border-color: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes primary_button {
+  0%,
+  100% {
+    box-shadow: -5px 10px 12px oklch(0.92 0.004 286.32);
+  }
+  20%,
+  60% {
+    box-shadow: 0 10px 12px oklch(0.905 0.093 164.15);
+  }
+  40%,
+  80% {
+    box-shadow: 5px 10px 12px oklch(0.917 0.08 205.041);
+  }
+}

@@ -11,7 +11,7 @@ const Header = () => {
 			</div> */}
       <header
         id="header"
-        className="sticky top-0 left-0 z-10  bg-white shadow-xs border-b border-b-zinc-200"
+        className="sticky top-0 left-0 z-30  bg-white shadow-xs border-b border-b-zinc-200"
       >
         <main className="h-16 layout_responsive w-full flex items-center justify-between text-[15px] font-medium">
           <Link href={'/'}>
@@ -24,7 +24,7 @@ const Header = () => {
           </nav>
           <Link
             href={'/auth/login'}
-            className="max-md:hidden px-4 py-2 button_primary_action flex items-center gap-2"
+            className="max-md:hidden flex items-center gap-2 px-3 py-2 rounded-full bg-zinc-100 hover:bg-[#333] hover:text-white duration-200"
           >
             <LogIn size={15} /> Đăng nhập
           </Link>

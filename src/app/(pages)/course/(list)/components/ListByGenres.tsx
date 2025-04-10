@@ -1,15 +1,20 @@
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { ReactNode } from 'react';
 import CourseItem from './Course';
 
 type Props = {
-  titleGenres: string;
+  titleGenres: string | ReactNode;
   data?: ICourseItem[];
 };
 
 const ListByGenres = ({ titleGenres }: Props) => {
   return (
     <section className="flex flex-col gap-5">
-      <h3 className="text-xl sm:text-2xl font-semibold">{titleGenres}</h3>
+      {typeof titleGenres == 'string' ? (
+        <h3 className="text-xl sm:text-2xl font-semibold">{titleGenres}</h3>
+      ) : (
+        titleGenres
+      )}
       <div className="max-md:hidden grid md:grid-cols-2 xl:grid-cols-4 gap-7">
         {Array.from({ length: 4 }).map((_, index: number) => (
           <CourseItem key={index} />
