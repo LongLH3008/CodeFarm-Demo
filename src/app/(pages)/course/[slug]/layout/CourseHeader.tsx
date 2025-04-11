@@ -3,6 +3,7 @@ import Brand from '@/components/icons/FooterLogo';
 import Container from '@/components/layout/Container';
 import StyledButton from '@/components/shared/StyledButton';
 import Image from 'next/image';
+import BannerMarquee from '../components/BannerMarquee';
 import Overview from '../components/Overview';
 
 const CourseHeader = () => {
@@ -59,12 +60,7 @@ const CourseHeader = () => {
         </div>
         <Overview />
       </Container>
-      <div className="max-sm:hidden flex flex-col w-full gap-4 overflow-hidden absolute bottom-12 left-0">
-        <div className="marquee-item right"></div>
-        <div className="marquee-item left"></div>
-        <div className="marquee-item right"></div>
-        <div className="marquee-item left"></div>
-      </div>
+      <BannerMarquee />
     </header>
   );
 };
