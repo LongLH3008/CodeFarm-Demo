@@ -167,3 +167,37 @@ input[type='search']::-webkit-search-cancel-button {
     transform: translateX(0);
   }
 }
+
+.marquee-item {
+  opacity: 0.8;
+  width: 200%;
+  height: 30px;
+  background: url('../assets/imgs/languages.png') repeat-x;
+  background-size: auto 100%;
+}
+
+.marquee-item.right {
+  animation: marquee-right 30s alternate-reverse infinite;
+}
+
+.marquee-item.left {
+  animation: marquee-left 30s alternate-reverse infinite;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

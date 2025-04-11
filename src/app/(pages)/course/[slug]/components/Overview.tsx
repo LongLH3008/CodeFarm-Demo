@@ -1,11 +1,11 @@
 const Overview = () => {
   return (
-    <section className="rounded-md p-4 w-full border grid max-md:p-2 sm:grid-cols-2 lg:grid-cols-4 bg-white z-10">
+    <section className="rounded-md p-4 w-full shadow-md grid max-md:p-2 sm:grid-cols-2 lg:grid-cols-4 bg-white z-10">
       <div className="flex flex-col py-2 px-5 border-r max-lg:border-b max-sm:border-r-0">
         <h3 className="font-[600] text-lg">8 chương kiến thức</h3>
-        <span className="md:text-sm">Mỗi chương khoảng 5 - 7 bài giảng</span>
+        <span className="md:text-sm">Mỗi chương từ 5 - 7 bài giảng</span>
       </div>
-      <div className="flex flex-col py-2 px-5 border-r max-lg:border-b max-sm:border-r-0">
+      <div className="flex flex-col py-2 px-5 border-r max-lg:border-b max-md:border-r-0">
         <h3 className="font-[600] text-lg">Độ khó kiến thức</h3>
         <span className="md:text-sm">Lượng kiến thức đáp ứng ở mức dễ</span>
       </div>

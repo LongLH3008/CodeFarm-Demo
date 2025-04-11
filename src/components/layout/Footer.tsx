@@ -6,7 +6,7 @@ import TechTree from '../icons/TechTree';
 
 const Footer = () => {
   return (
-    <footer className="layout_responsive border-t py-8 pb-5  flex flex-col gap-5 items-center justify-center">
+    <footer className="layout_responsive border-t border-zinc-100 py-8 pb-5  flex flex-col gap-5 items-center justify-center">
       <Image src={FooterLogo} className="h-8 w-auto" alt="CodeFarm" />
       <span className="italic text-[12px] text-center lg:w-2/3">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum debitis provident, facilis
