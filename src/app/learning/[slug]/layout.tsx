@@ -1,26 +1,33 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+'use client';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
+import learningSetting from '@/core/store/learningSetting';
+import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+type Props = {
+  sidebar: ReactNode;
+  main: ReactNode;
+};
 
-export default function LearningLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const Layout = ({ sidebar, main }: Props) => {
+  const { expand, layout } = learningSetting();
+
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div>Learning Layout</div>
-        {children}
-      </body>
-    </html>
+    <motion.main
+      layout
+      initial={false}
+      animate={{
+        gap: expand ? '0% 0' : '1.2% 0',
+        padding: expand ? '0%' : '1.2%',
+        flexDirection: layout === 'rtl' ? 'row-reverse' : 'row',
+      }}
+      transition={{ duration: 0.25, ease: 'easeInOut' }}
+      className="flex h-screen bg-[rgba(0,0,0,0.3)]"
+    >
+      {sidebar}
+      {main}
+    </motion.main>
   );
-}
+};
+
+export default Layout;

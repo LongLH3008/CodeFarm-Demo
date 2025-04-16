@@ -2,7 +2,7 @@
   opacity: 0.8;
   width: 200%;
   height: 30px;
-  background: url('@/assets/imgs/languages.png') repeat-x;
+  background: url('../../../../../assets/imgs/languages.png') repeat-x;
   background-size: auto 100%;
 }
 

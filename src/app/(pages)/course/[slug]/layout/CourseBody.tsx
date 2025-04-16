@@ -9,7 +9,7 @@ const CourseBody = () => {
   return (
     <Container
       as="div"
-      className="!min-h-fit relative flex flex-col gap-20 md:gap-24 bg-gradient-to-b from-70% from-[#ebfeff] to-white overflow-x-hidden"
+      className="!min-h-fit relative flex flex-col gap-20 md:gap-32 bg-gradient-to-b from-70% from-[#ebfeff] to-white overflow-x-hidden"
     >
       <YouWillEarn />
       <Chapter />

@@ -24,7 +24,7 @@ export function Chapter() {
       <Accordion
         type="single"
         collapsible
-        className="md:w-[50%] bg-white outline-none shadow-md rounded-lg p-5 relative overflow-hidden"
+        className="md:w-[40%] bg-white outline-none shadow-md rounded-lg p-5 relative overflow-hidden"
       >
         <span className="h-1 w-full bg-gradient-to-r from-[#11ccf5] to-[#7ed276] absolute top-0 left-0"></span>
         <div className="flex items-center gap-2 mb-3">
