@@ -17,11 +17,11 @@ const HeadControl = () => {
   };
 
   return (
-    <div className="w-full flex justify-end items-center gap-2 pr-4">
+    <div className="w-full flex justify-end items-center gap-2 lg:pr-4">
       {sidebar && (
         <span
           onClick={() => layoutChange(layout === 'ltr' ? 'rtl' : 'ltr')}
-          className="size-8 rounded-md active:scale-[0.9] duration-200 hover:bg-zinc-100 relative cursor-pointer *:absolute *:left-1/2 *:top-1/2 *:-translate-1/2"
+          className="max-xl:hidden size-8 rounded-md active:scale-[0.9] duration-200 hover:bg-zinc-100 relative cursor-pointer *:absolute *:left-1/2 *:top-1/2 *:-translate-1/2"
         >
           <PanelRight
             size={18}
@@ -37,7 +37,7 @@ const HeadControl = () => {
       )}
       <span
         onClick={() => expandChange(expand)}
-        className="size-8 rounded-md active:scale-[0.9] duration-200 hover:bg-zinc-100 relative cursor-pointer *:absolute *:left-1/2 *:top-1/2 *:-translate-1/2"
+        className="max-xl:hidden size-8 rounded-md active:scale-[0.9] duration-200 hover:bg-zinc-100 relative cursor-pointer *:absolute *:left-1/2 *:top-1/2 *:-translate-1/2"
       >
         <Minimize size={18} strokeWidth={1.5} style={expandEffect('open')} />
         <Maximize size={18} strokeWidth={1.5} style={expandEffect('close')} />

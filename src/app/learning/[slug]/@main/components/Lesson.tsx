@@ -8,16 +8,17 @@ type Props = {
 };
 
 const Lesson = ({ markdown }: Props) => {
-  const { textSize: fontSize } = learningSetting();
+  const fontSize = learningSetting().textSize;
 
   const styles: React.CSSProperties = {
     fontSize,
   };
 
-  console.log(fontSize);
-
   return (
-    <div style={styles} className="prose w-full p-5 h-fit !text-[#333] !font-sans">
+    <div
+      style={styles}
+      className="w-full bg-white p-2 md:p-5 h-fit !text-[#333] !font-sans select-none"
+    >
       <RenderMarkdown markdown={markdown} />
     </div>
   );

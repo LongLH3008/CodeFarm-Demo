@@ -10,7 +10,8 @@ type Props = {
 };
 
 const Layout = ({ sidebar, main }: Props) => {
-  const { expand, layout } = learningSetting();
+  const expand = learningSetting(state => state.expand);
+  const layout = learningSetting(state => state.layout);
 
   return (
     <motion.main
@@ -22,10 +23,10 @@ const Layout = ({ sidebar, main }: Props) => {
         flexDirection: layout === 'rtl' ? 'row-reverse' : 'row',
       }}
       transition={{ duration: 0.25, ease: 'easeInOut' }}
-      className="flex h-screen bg-[rgba(0,0,0,0.3)]"
+      className="flex h-screen bg-[rgba(0,0,0,0.3)] relative"
     >
-      {sidebar}
       {main}
+      {sidebar}
     </motion.main>
   );
 };

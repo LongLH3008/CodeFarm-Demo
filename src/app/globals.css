@@ -168,49 +168,6 @@ input[type='search']::-webkit-search-cancel-button {
   }
 }
 
-.learning_expand__true {
-  animation: expand_true 0.25s forwards ease-in-out;
-}
-
-.learning_expand__false > .learning_part {
-  animation: part_expand 0.25s forwards ease-in-out;
-}
-
-@keyframes part_expand {
-  from {
-    border-radius: 0;
-  }
-  to {
-    border-radius: 0.5vw;
-  }
-}
-
-@keyframes expand_false {
-  from {
-    gap: 0% 0;
-    padding: 0%;
-  }
-  to {
-    gap: 1.2% 0;
-    padding: 1.2%;
-  }
-}
-
-.learning_expand__false {
-  animation: expand_false 0.25s forwards ease-in-out;
-}
-
-@keyframes expand_true {
-  to {
-    gap: 0% 0;
-    padding: 0%;
-  }
-  from {
-    gap: 1.2% 0;
-    padding: 1.2%;
-  }
-}
-
 .show_dropdown_lesson__true {
   animation: show_dropdown_true 0.25s forwards ease-in-out;
 }

@@ -25,42 +25,42 @@ const RenderMarkdown = ({ markdown }: Props) => {
         h1: ({ ...props }) => (
           <h1
             style={{ fontSize: '1.8em', marginBottom: '0.75em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
         h2: ({ ...props }) => (
           <h2
             style={{ fontSize: '1.6em', marginBottom: '0.75em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
         h3: ({ ...props }) => (
           <h3
             style={{ fontSize: '1.4em', marginBottom: '0.75em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
         h4: ({ ...props }) => (
           <h4
             style={{ fontSize: '1.2em', marginBottom: '0.5em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
         h5: ({ ...props }) => (
           <h5
             style={{ fontSize: '1.1em', marginBottom: '0.5em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
         h6: ({ ...props }) => (
           <h6
             style={{ fontSize: '1em', marginBottom: '0.5em' }}
-            className="font-semibold text-[#333]"
+            className="font-semibold leading-none text-[#333]"
             {...props}
           />
         ),
@@ -87,7 +87,7 @@ const RenderMarkdown = ({ markdown }: Props) => {
         img: ({ src, alt }) => (
           <figure
             style={{ margin: '1em 0' }}
-            className="rounded-lg bg-zinc-100 mx-auto aspect-[16/9] max-w-full min-h-[30dvh] max-h-[45dvh] overflow-hidden flex items-center justify-center"
+            className="rounded-lg bg-zinc-100 mx-auto aspect-[16/9] w-full h-[25dvh] md:h-[30dvh] md:max-h-[45dvh] overflow-hidden flex items-center justify-center"
           >
             <Image
               src={src ?? imgDefault.src}
