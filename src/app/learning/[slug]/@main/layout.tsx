@@ -62,7 +62,7 @@ const MainContent = ({ children }: Props) => {
         </div>
         <HeadControl />
       </section>
-      <div className="h-full flex justify-center md:py-3 bg-zinc-100 relative">
+      <div className="h-full flex justify-center pt-[2px] md:py-3 bg-zinc-100 relative">
         <ScrollProgress container={contentLesson} />
         <section
           ref={contentLesson}
