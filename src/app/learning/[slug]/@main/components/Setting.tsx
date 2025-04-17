@@ -17,7 +17,7 @@ export function Setting({ trigger }: Props) {
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
-      <DialogContent className="sm:max-w-lg">
+      <DialogContent className="sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Tùy chỉnh</DialogTitle>
         </DialogHeader>

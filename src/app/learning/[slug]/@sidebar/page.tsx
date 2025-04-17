@@ -10,7 +10,7 @@ const Page = () => {
           Nội dung
         </span>
       </div>
-      <div className="flex flex-col overflow-y-scroll h-[calc(100%-56px)]">
+      <div className="flex flex-col overflow-y-scroll h-[calc(100dvh-56px)]">
         {Array.from({ length: 50 }).map((_, index: number) => (
           <ChapterItem key={index} />
         ))}

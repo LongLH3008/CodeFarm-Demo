@@ -1,5 +1,7 @@
 'use client';
 
+import { debounce } from '@/core/lib/debounce';
+import { throttle } from '@/core/lib/throttle';
 import { motion } from 'motion/react';
 import { RefObject, useEffect, useState } from 'react';
 
@@ -14,7 +16,7 @@ function ScrollProgress({ container }: Props) {
     const el = container.current;
     if (!el) return;
 
-    const handleScroll = () => {
+    const updateProgress = () => {
       const { scrollHeight, scrollTop, clientHeight } = el;
       const total = scrollHeight - clientHeight;
 
@@ -24,6 +26,11 @@ function ScrollProgress({ container }: Props) {
       setProgress(currentProgress);
     };
 
+    const handleScroll = () => {
+      throttle(updateProgress, 100)();
+      debounce(updateProgress, 120)();
+    };
+
     el.addEventListener('scroll', handleScroll);
 
     return () => el.removeEventListener('scroll', handleScroll);
@@ -31,7 +38,7 @@ function ScrollProgress({ container }: Props) {
 
   return (
     <motion.div
-      className="h-1 lg:duration-200 bg-gradient-to-r to-cyan-500 from-green-200 absolute top-0 left-0 rounded-r-full"
+      className="h-1 lg:duration-400 ease-in-out will-change-transform ease-in-out bg-gradient-to-r to-cyan-500 from-green-200 absolute top-0 left-0 rounded-r-full"
       style={{ width: `${progress}%` }}
     />
   );
