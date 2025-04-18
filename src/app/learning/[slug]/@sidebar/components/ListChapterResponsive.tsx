@@ -12,7 +12,7 @@ export function ListChapterResponsive({ children }: Props) {
       <Sheet>
         <SheetTrigger asChild>
           <span
-            className={`ml-2 size-8 active:scale-[0.9] relative *:absolute *:-translate-1/2 *:left-1/2 *:top-1/2 duration-200 rounded-md hover:bg-zinc-100 grid place-items-center cursor-pointer`}
+            className={`ml-2 size-8 active:scale-[0.9] relative *:absolute *:-translate-1/2 *:left-1/2 *:top-1/2 duration-200 rounded-md hover:bg-(--lms-foreground) grid place-items-center cursor-pointer`}
           >
             <PanelLeftDashed size={18} strokeWidth={1.5} />
           </span>

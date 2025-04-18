@@ -14,7 +14,7 @@ const ButtonControl = ({ children, className, side, label, ...rest }: Props) => 
     <HoverLabel side={side} label={label}>
       <span
         className={cn(
-          `size-8 rounded-full border active:scale-[0.9] duration-200 hover:bg-zinc-100 cursor-pointer relative grid place-items-center ${className}`,
+          `size-8 rounded-full border border-(--lms-border) active:scale-[0.9] duration-200 hover:bg-(--lms-foreground) cursor-pointer relative grid place-items-center ${className}`,
         )}
         {...rest}
       >

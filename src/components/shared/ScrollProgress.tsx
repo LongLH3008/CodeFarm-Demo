@@ -38,7 +38,7 @@ function ScrollProgress({ container }: Props) {
 
   return (
     <motion.div
-      className="h-1 lg:duration-400 ease-in-out will-change-transform ease-in-out bg-gradient-to-r to-cyan-500 from-green-200 absolute top-0 left-0 rounded-r-full"
+      className="h-1 lg:duration-400 ease-in-out will-change-transform ease-in-out bg-gradient-to-r to-(--lms-progress-to) from-(--lms-progress-from) absolute top-0 left-0 rounded-r-full"
       style={{ width: `${progress}%` }}
     />
   );

@@ -43,10 +43,10 @@ const Control = () => {
   };
 
   const navigateButton =
-    'max-md:fixed max-md:bottom-3 max-md:bg-white max-md:border max-md:shadow-md max-md:rounded-full max-md:size-10 max-md:z-50';
+    'max-md:fixed max-md:bottom-3 max-md:bg-(--lms-bg) max-md:border max-md:shadow-md max-md:rounded-full max-md:size-10 max-md:z-50';
 
   return (
-    <section className="min-h-[56px] border-b w-full items-center gap-5 flex md:px-1 xl:px-2">
+    <section className="min-h-[56px] text-(--lms-text) border-b border-(--lms-border) w-full items-center gap-5 flex md:px-1 xl:px-2">
       <div className="w-full flex justify-between items-center py-1">
         <ButtonControl
           label={`${sidebar ? 'Ẩn mục lục' : 'Hiện mục lục'}`}
@@ -62,8 +62,10 @@ const Control = () => {
       </div>
       <div className="flex justify-between items-center md:min-w-[700px]">
         <div className="max-md:hidden h-full flex flex-col gap-[2px] justify-center">
-          <h3 className="text-lg font-[500] leading-none">Lập trình Javascript cơ bản</h3>
-          <span className="leading-none text-[15px]">
+          <h3 className="text-lg font-[500] leading-none text-(--lms-heading)">
+            Lập trình Javascript cơ bản
+          </h3>
+          <span className="leading-none text-[15px] text-(--lms-text)">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           </span>
         </div>

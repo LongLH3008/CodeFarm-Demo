@@ -18,6 +18,7 @@ const ListChapter = ({ children }: Props) => {
     width: sidebar ? 500 : 0,
     opacity: sidebar ? 1 : 0,
     borderRadius: expand ? 0 : 10,
+    borderWidth: sidebar && expand ? 1 : 0,
   };
 
   return (
@@ -25,7 +26,7 @@ const ListChapter = ({ children }: Props) => {
       animate={animate}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       layout
-      className={`max-lg:hidden will-change-transform bg-white border-x overflow-hidden h-full flex flex-col`}
+      className={`max-lg:hidden will-change-transform border-(--lms-border) bg-(--lms-bg) overflow-hidden h-full flex flex-col`}
     >
       {children}
     </motion.div>
