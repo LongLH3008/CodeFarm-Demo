@@ -15,7 +15,7 @@ const Setting_Layout = () => {
   const changeSidebar = learningSetting().toggleSidebar;
 
   return (
-    <section className="grid grid-cols-5 items-start">
+    <section className="max-lg:hidden grid grid-cols-5 gap-3 items-start">
       <div className="col-span-2 flex items-center gap-3 font-[500]">
         <span className="size-9 grid place-items-center rounded-md bg-(--lms-foreground)">
           <LayoutDashboard strokeWidth={1.5} size={20} className="text-(--lms-text)" />

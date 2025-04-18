@@ -54,6 +54,12 @@
   transition: 0.3s ease;
 }
 
+@media screen and (max-width: 768px) {
+  .lms_scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .lms_scroll::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, var(--lms-progress-from), var(--lms-progress-to));
   cursor: pointer;

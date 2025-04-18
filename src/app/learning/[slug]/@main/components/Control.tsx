@@ -1,5 +1,6 @@
 'use client';
 
+import Logo from '@/components/icons/Logo';
 import TechTree from '@/components/icons/TechTree';
 import learningSetting from '@/core/store/learningSetting';
 import {
@@ -46,7 +47,7 @@ const Control = () => {
     'max-md:fixed max-md:bottom-3 max-md:bg-(--lms-bg) max-md:border max-md:shadow-md max-md:rounded-full max-md:size-10 max-md:z-50';
 
   return (
-    <section className="min-h-[56px] text-(--lms-text) border-b border-(--lms-border) w-full items-center gap-5 flex md:px-1 xl:px-2">
+    <section className="min-h-[56px] text-(--lms-text) relative border-b border-(--lms-border) w-full items-center gap-5 flex md:px-1 xl:px-2">
       <div className="w-full flex justify-between items-center py-1">
         <ButtonControl
           label={`${sidebar ? 'Ẩn mục lục' : 'Hiện mục lục'}`}
@@ -56,9 +57,8 @@ const Control = () => {
           <PanelLeftDashed size={18} strokeWidth={1.5} style={sidebarEffect('open')} />
           <PanelsTopLeft size={18} strokeWidth={1.5} style={sidebarEffect('close')} />
         </ButtonControl>
-        <span className="max-lg:hidden p-[3px] bg-transparent rounded-md">
-          <TechTree className="h-8 w-fit" />
-        </span>
+        <TechTree className="max-md:hidden h-8 w-fit" />
+        <Logo className="md:hidden absolute top-2 left-1/2 -translate-x-1/2 h-10 w-fit" />
       </div>
       <div className="flex justify-between items-center md:min-w-[700px]">
         <div className="max-md:hidden h-full flex flex-col gap-[2px] justify-center">

@@ -8,7 +8,7 @@ const Setting_Theme = () => {
   const changeTheme = learningSetting().changeTheme;
 
   return (
-    <section className="grid grid-cols-5 items-start">
+    <section className="grid max-md:gap-3 md:grid-cols-5 items-start">
       <div className="col-span-2 flex items-center gap-3 font-[500]">
         <span className="size-9 grid place-items-center rounded-md bg-(--lms-foreground)">
           <Palette strokeWidth={1.5} size={20} className="text-(--lms-text)" />

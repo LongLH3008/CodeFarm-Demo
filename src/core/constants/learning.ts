@@ -1,4 +1,4 @@
-import { darkula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const textSizesConstant: number[] = [12, 14, 16, 18, 20];
@@ -11,7 +11,7 @@ export const defaultLearningSettingConstant: Partial<TLearningSetting> = {
 }
 
 export const blockCodeThemesConstant: Record<string, TBlockCodeThemeConstant> = {
-    light: darkula,
+    light: darcula,
     dark: atomDark
 }
 

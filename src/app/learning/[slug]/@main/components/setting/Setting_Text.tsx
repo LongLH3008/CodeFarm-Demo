@@ -8,14 +8,14 @@ const Setting_Text = () => {
   const changeTextSize = learningSetting().changeTextSize;
 
   return (
-    <section className="grid grid-cols-5">
+    <section className="grid max-sm:gap-3 sm:grid-cols-5">
       <div className="col-span-2 flex items-center gap-3 font-[500]">
         <span className="size-9 grid place-items-center rounded-md bg-(--lms-foreground)">
           <ALargeSmall strokeWidth={1.5} size={20} className="text-(--lms-text)" />
         </span>
         Cỡ chữ
       </div>
-      <div className="col-span-3 flex items-center gap-2 border border-(--lms-border) rounded-md p-1 w-fit">
+      <div className="col-span-3 flex items-center justify-between border border-(--lms-border) rounded-md p-1 sm:w-fit">
         <SettingButton
           disabled={textSize === textSizesConstant[0]}
           onClick={() => changeTextSize('smaller')}

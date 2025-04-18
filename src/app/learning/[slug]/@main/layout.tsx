@@ -25,17 +25,16 @@ const MainContent = ({ children }: Props) => {
       animate={{
         marginLeft: marginValue,
         marginRight: marginValue,
-        borderRadius: expand ? 0 : 10,
       }}
       transition={{ duration: 0.3 }}
-      className={`bg-(--lms-bg) overflow-hidden relative flex flex-col transition-transform w-full`}
+      className={`bg-(--lms-bg) ${expand ? '' : 'lg:rounded-[10px]'} duration-300 overflow-hidden relative flex flex-col transition-transform w-full`}
     >
       <Control />
-      <section className="h-full flex justify-center pt-[2px] md:py-3 bg-(--lms-foreground) relative">
+      <section className="h-full flex justify-center pt-[2px] lg:py-3 bg-(--lms-foreground) relative">
         <ScrollProgress container={contentLesson} />
         <section
           ref={contentLesson}
-          className="h-[calc(100%-56px-12px)] lms_scroll md:rounded-lg w-full max-w-[700px] overflow-y-scroll relative"
+          className="h-[calc(100%-56px-12px)] lms_scroll md:rounded-lg w-full lg:max-w-[700px] overflow-y-scroll relative"
         >
           {children}
         </section>

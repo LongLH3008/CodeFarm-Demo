@@ -34,7 +34,7 @@ const Features = ({ document }: Props) => {
           <AArrowDown size={17} className="text-(--lms-text)" />
         </ButtonControl>
       </div>
-      <div className="bg-(--lms-bg) border-(--lms-foreground) shadow-md shadow-(--lms-foreground) flex max-md:flex-row md:flex-col gap-[6px] p-[6px] rounded-full border">
+      <div className="max-md:hidden bg-(--lms-bg) border-(--lms-foreground) shadow-md shadow-(--lms-foreground) flex max-md:flex-row md:flex-col gap-[6px] p-[6px] rounded-full border">
         <ButtonControl
           className="max-md:hidden"
           label="Cuộn lên"

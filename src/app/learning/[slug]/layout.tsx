@@ -22,10 +22,9 @@ const Layout = ({ sidebar, main }: Props) => {
         initial={false}
         animate={{
           gap: expand ? '0% 0' : '1.2% 0',
-          padding: expand ? '0%' : '1.2%',
         }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className={`flex h-screen bg-(--lms-layout-bg) relative ${layout === 'ltr' ? 'lg:flex-row-reverse' : ''}`}
+        className={`flex h-screen bg-(--lms-layout-bg) relative duration-200 ease-in-out lg:${!expand ? 'p-[1.2%]' : ''} ${layout === 'ltr' ? 'lg:flex-row-reverse' : ''}`}
       >
         {main}
         {sidebar}
