@@ -28,6 +28,6 @@ interface TLearningSetting {
     theme: TLearningThemes;
     changeTheme: (theme: TLearningThemes) => void;
 
-    loadingConfig?: () => void;
+    setupConfig: (config: Partial<TLearningSetting>) => void;
 }
 

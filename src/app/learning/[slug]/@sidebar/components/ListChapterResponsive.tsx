@@ -1,8 +1,15 @@
 'use client';
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import learningSetting from '@/core/store/learningSetting';
-import { PanelLeftDashed } from 'lucide-react';
+import { PanelLeftDashed, X } from 'lucide-react';
 import { ReactNode } from 'react';
 
 type Props = {
@@ -22,11 +29,20 @@ export function ListChapterResponsive({ children }: Props) {
             <PanelLeftDashed size={18} strokeWidth={1.5} className="text-(--lms-text)" />
           </span>
         </SheetTrigger>
-        <SheetContent data-lms-theme={theme} className="bg-(--lms-bg) gap-0" side="left">
-          <SheetHeader className="hidden">
-            <SheetTitle />
-          </SheetHeader>
-          {children}
+        <SheetContent
+          data-lms-theme={theme}
+          className="bg-(--lms-bg) gap-0 [&>button]:hidden"
+          side="left"
+        >
+          <div className="relative overflow-auto">
+            <SheetClose className="bg-100 ring-0 rounded-sm cursor-pointer hover:bg-(--lms-foreground) p-1 w-fit absolute top-4 right-3">
+              <X strokeWidth={1.5} size={16} className="text-(--lms-text)" />
+            </SheetClose>
+            <SheetHeader className="hidden">
+              <SheetTitle className="hidden" />
+            </SheetHeader>
+            {children}
+          </div>
         </SheetContent>
       </Sheet>
     </div>

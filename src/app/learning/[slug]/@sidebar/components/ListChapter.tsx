@@ -26,7 +26,7 @@ const ListChapter = ({ children }: Props) => {
       animate={animate}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       layout
-      className={`max-lg:hidden will-change-transform border-(--lms-border) bg-(--lms-bg) overflow-hidden h-full flex flex-col`}
+      className={`max-lg:hidden will-change-transform !border-y-0 border-(--lms-border) bg-(--lms-bg) overflow-hidden h-full flex flex-col`}
     >
       {children}
     </motion.div>

@@ -1,8 +1,8 @@
 'use client';
 
 import learningSetting from '@/core/store/learningSetting';
-import { motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ReactNode, useLayoutEffect } from 'react';
 import './styles.css';
 
 type Props = {
@@ -13,22 +13,28 @@ type Props = {
 const Layout = ({ sidebar, main }: Props) => {
   const expand = learningSetting(state => state.expand);
   const layout = learningSetting(state => state.layout);
-  const theme = learningSetting().theme;
+  const theme = learningSetting(state => state.theme);
+
+  useLayoutEffect(() => {}, [theme]);
+
+  const themeSetting = JSON.parse(localStorage.getItem('learning-setting') || '');
 
   return (
-    <main data-lms-theme={theme}>
-      <motion.div
-        layout
-        initial={false}
-        animate={{
-          gap: expand ? '0% 0' : '1.2% 0',
-        }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className={`flex h-screen bg-(--lms-layout-bg) relative duration-200 ease-in-out lg:${!expand ? 'p-[1.2%]' : ''} ${layout === 'ltr' ? 'lg:flex-row-reverse' : ''}`}
-      >
-        {main}
-        {sidebar}
-      </motion.div>
+    <main data-lms-theme={themeSetting.state.theme || 'light'}>
+      <AnimatePresence initial={false}>
+        <motion.div
+          layout
+          animate={{
+            gap: expand ? '0% 0' : '1.2% 0',
+            padding: !expand ? 'var(--lms-collapse)' : 0,
+          }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className={`flex h-screen bg-(--lms-layout-bg) ${layout === 'ltr' ? 'lg:flex-row-reverse' : ''}`}
+        >
+          {main}
+          {sidebar}
+        </motion.div>
+      </AnimatePresence>
     </main>
   );
 };
