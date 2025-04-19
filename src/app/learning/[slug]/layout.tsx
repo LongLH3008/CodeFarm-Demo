@@ -20,7 +20,7 @@ const Layout = ({ sidebar, main }: Props) => {
   const themeSetting = stored ? JSON.parse(stored) : null;
 
   return (
-    <main data-lms-theme={themeSetting.state.theme || 'light'}>
+    <main data-lms-theme={themeSetting ? themeSetting.state.theme : 'light'}>
       <AnimatePresence initial={false}>
         <motion.div
           layout
