@@ -16,8 +16,8 @@ const Layout = ({ sidebar, main }: Props) => {
   const theme = learningSetting(state => state.theme);
 
   useLayoutEffect(() => {}, [theme]);
-
-  const themeSetting = JSON.parse(localStorage.getItem('learning-setting') || '');
+  const stored = localStorage.getItem('learning-setting');
+  const themeSetting = stored ? JSON.parse(stored) : null;
 
   return (
     <main data-lms-theme={themeSetting.state.theme || 'light'}>
